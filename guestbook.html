@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guestbook</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand" data-couple-brand>P &amp; P</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="details.html">Details</a></li>
+      <li><a href="our-story.html">Our Story</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="guestbook.html">Guestbook</a></li>
+      <li><a href="livestream.html">Livestream</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="section" style="padding-top:70px;">
+  <div class="container">
+    <div class="section-subtitle">Leave Us a Note</div>
+    <h1 class="section-title" style="text-align:center;">Guestbook</h1>
+    <p class="section-lead">
+      We'd love to hear from you. Sign below and your note will appear on this
+      page for everyone to see &mdash; and it comes straight to us too.
+    </p>
+
+    <form id="guest-form" class="guest-form">
+      <div class="field">
+        <label for="guest-name">Your Name</label>
+        <input type="text" id="guest-name" name="name" required maxlength="80">
+      </div>
+      <div class="field">
+        <label for="guest-message">Your Message</label>
+        <textarea id="guest-message" name="message" rows="4" required maxlength="600"></textarea>
+      </div>
+      <button type="submit" class="btn btn-solid">Sign the Guestbook</button>
+      <div id="form-status" class="form-status"></div>
+    </form>
+
+    <div class="divider" style="margin-top:60px;"><span class="mark">&#10022;</span></div>
+
+    <div id="guest-wall" class="guest-wall">
+      <!-- Populated automatically -->
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="brand" data-couple-brand>Partner One &amp; Partner Two</div>
+    <div><span data-wedding-date-footer>August 22, 2026</span></div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/site-data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/guestbook.js"></script>
+</body>
+</html>
