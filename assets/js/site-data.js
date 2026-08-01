@@ -26,8 +26,8 @@ window.SITE_DATA = {
   // THE COUPLE
   // ---------------------------------------------------------------
   couple: {
-    partnerOne: "Partner One",
-    partnerTwo: "Partner Two",
+    partnerOne: "Siddharth",
+    partnerTwo: "Danielle",
     hashtag: "" // optional, e.g. "#PartnerOneAndPartnerTwo2026" — leave blank to hide
   },
 
@@ -36,29 +36,29 @@ window.SITE_DATA = {
   // ---------------------------------------------------------------
   wedding: {
     dateDisplay: "August 22, 2026",     // shown as text throughout the site
-    isoDateTime: "2026-08-22T11:00:00"  // used to power the countdown — set to ceremony start
+    isoDateTime: "2026-08-22T10:30:00"  // used to power the countdown — set to ceremony start
   },
 
   // ---------------------------------------------------------------
   // CEREMONY
   // ---------------------------------------------------------------
   ceremony: {
-    venueName: "St. Augustine Chapel",
-    addressLine: "123 Garden Lane, Napa, CA",
-    mapsUrl: "https://maps.google.com/?q=St.+Augustine+Chapel+123+Garden+Lane+Napa+CA",
-    startTime: "11:00 AM",
-    endTime: "12:00 PM"
+    venueName: "Randolph Church",
+    addressLine: "US Route 2, Randolph, NH 03593",
+    mapsUrl: "https://maps.app.goo.gl/cWdnxgfHiUXs8eFk8",
+    startTime: "10:30 AM",
+    endTime: "11:30 AM"
   },
 
   // ---------------------------------------------------------------
   // RECEPTION
   // ---------------------------------------------------------------
   reception: {
-    venueName: "The Vinewood Estate",
-    addressLine: "456 Hillside Road, Napa, CA",
-    mapsUrl: "https://maps.google.com/?q=The+Vinewood+Estate+456+Hillside+Road+Napa+CA",
+    venueName: "Omni Mount Washington",
+    addressLine: "310 Mount Washington Hotel Rd, Bretton Woods, NH 03575",
+    mapsUrl: "https://maps.app.goo.gl/5rLwdRG1cBTegnbv5",
     startTime: "1:00 PM",
-    endTime: "11:00 PM"
+    endTime: "4:00 PM"
   },
 
   // ---------------------------------------------------------------
