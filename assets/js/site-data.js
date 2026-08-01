@@ -127,8 +127,8 @@ window.SITE_DATA = {
     // 2) Supabase stores the messages so they can be displayed publicly on this page.
     //    Create a free project at https://supabase.com and paste the values below.
     //    Full step-by-step instructions are in SETUP.md.
-    supabaseUrl: "https://YOUR_PROJECT_REF.supabase.co",
-    supabaseAnonKey: "YOUR_SUPABASE_ANON_KEY",
+    supabaseUrl: "https://sylxxhfhmjtvaekfrkcd.supabase.co",
+    supabaseAnonKey: "sb_publishable_ZQON32nifIT0kcBuNtHAeA__L3RRVw2",
     supabaseTable: "guestbook"
   },
 
@@ -136,6 +136,6 @@ window.SITE_DATA = {
   // the actual recipients are configured in your Formspree form settings)
   notifyEmails: [
     "ninasegurar@icloud.com",
-    "partner@example.com"
+    "siddharth.si@gmail.com"
   ]
 };
