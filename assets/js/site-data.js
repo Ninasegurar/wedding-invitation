@@ -122,7 +122,7 @@ window.SITE_DATA = {
   guestbook: {
     // 1) Formspree sends you both an email every time someone signs the guestbook.
     //    Create a free form at https://formspree.io and paste its endpoint below.
-    formspreeEndpoint: "https://formspree.io/f/YOUR_FORM_ID",
+    formspreeEndpoint: "https://formspree.io/f/xdaqrdar",
 
     // 2) Supabase stores the messages so they can be displayed publicly on this page.
     //    Create a free project at https://supabase.com and paste the values below.
