@@ -36,7 +36,7 @@ window.SITE_DATA = {
   // ---------------------------------------------------------------
   wedding: {
     dateDisplay: "August 22, 2026",     // shown as text throughout the site
-    isoDateTime: "2026-08-22T11:00:00-04:00"  // used to power the countdown — set to ceremony start
+    isoDateTime: "2026-08-22T10:30:00-04:00"  // used to power the countdown — set to ceremony start
   },
 
   // ---------------------------------------------------------------
