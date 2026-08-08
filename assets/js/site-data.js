@@ -68,23 +68,17 @@ window.SITE_DATA = {
     {
       date: "Spring 2019",
       heading: "How We Met",
-      text: "When we met, from the very beginning, something about us just felt right.
-We started dating in the summer of 2024, taking things slowly and letting our relationship unfold naturally. But it didn’t take long to realize that what we had was something special."
+      text: "When we met, from the very beginning, something about us just felt right. We started dating in the summer of 2024, taking things slowly and letting our relationship unfold naturally. But it didn’t take long to realize that what we had was something special."
     },
     {
       date: "Winter 2021",
       heading: "Moving In Together",
-      text: "After spending our first Christmas together, being together simply became part of everyday life. Most days were spent side by side, and somewhere along the way, two separate lives began to feel like one.
-   
-         By May 2025, we officially made a home together—although in many ways, it already felt like we had."
+      text: "After spending our first Christmas together, being together simply became part of everyday life. Most days were spent side by side, and somewhere along the way, two separate lives began to feel like one. By May 2025, we officially made a home together — although in many ways, it already felt like we had."
     },
     {
       date: "Autumn 2025",
       heading: "The Proposal",
-      text: "Our story has never been about one grand moment. It has been about how easy and natural it has felt from the beginning, the life we’ve built together, and the quiet certainty that we had found something meant to last.
-
-         Marriage had come up more than once, so when Sid officially asked the question, it felt less like a surprise and more like the natural next step in a life we already knew we wanted to share. Fittingly, it happened in one of our favorite ways to have the conversations that matter most—early in the morning, before the day had really begun. And the answer felt just as natural: it would be an honor to spend the rest of our lives together.
-         "
+      text: "Our story has never been about one grand moment. It has been about how easy and natural it has felt from the beginning, the life we’ve built together, and the quiet certainty that we had found something meant to last. Marriage had come up more than once, so when Sid officially asked the question, it felt less like a surprise and more like the natural next step in a life we already knew we wanted to share. Fittingly, it happened in one of our favorite ways to have the conversations that matter most — early in the morning, before the day had really begun. And the answer felt just as natural: it would be an honor to spend the rest of our lives together."
     },
     {
       date: "August 22, 2026",
