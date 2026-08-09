@@ -24,9 +24,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  /* ---------- Footer year / brand ---------- */
+  /* ---------- Footer brand (full names) ---------- */
   document.querySelectorAll("[data-couple-brand]").forEach(function (el) {
     el.textContent = (DATA.couple ? DATA.couple.partnerOne + " & " + DATA.couple.partnerTwo : "");
+  });
+
+  /* ---------- Nav header brand (initials, so it never overflows) ---------- */
+  document.querySelectorAll("[data-couple-initials]").forEach(function (el) {
+    if (DATA.couple && DATA.couple.partnerOne && DATA.couple.partnerTwo) {
+      el.textContent = DATA.couple.partnerOne.charAt(0) + " & " + DATA.couple.partnerTwo.charAt(0);
+    }
   });
   document.querySelectorAll("[data-wedding-date-footer]").forEach(function (el) {
     el.textContent = DATA.wedding ? DATA.wedding.dateDisplay : "";
