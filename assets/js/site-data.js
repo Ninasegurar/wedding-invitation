@@ -21,7 +21,7 @@ window.SITE_DATA = {
   // THE COUPLE
   // ---------------------------------------------------------------
   couple: {
-    partnerOne: "Siddharth",
+    partnerOne: "Siddharth ",
     partnerTwo: "Danielle",
     hashtag: "" // optional, e.g. "#PartnerOneAndPartnerTwo2026" — leave blank to hide
   },
