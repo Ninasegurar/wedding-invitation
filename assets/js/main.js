@@ -150,6 +150,24 @@ document.addEventListener("DOMContentLoaded", function () {
           "</div>"
         );
       }).join("");
+
+      // Re-run fade-in observer on newly injected gallery items
+      // (the earlier observer only saw elements present at page load)
+      var newGalleryFaders = galleryEl.querySelectorAll(".fade-in");
+      if ("IntersectionObserver" in window) {
+        var obs3 = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              obs3.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        newGalleryFaders.forEach(function (el) { obs3.observe(el); });
+      } else {
+        newGalleryFaders.forEach(function (el) { el.classList.add("visible"); });
+      }
+
       var lightbox = document.querySelector(".lightbox");
       var lightboxImg = lightbox ? lightbox.querySelector("img") : null;
       galleryEl.querySelectorAll(".gallery-item").forEach(function (item) {
