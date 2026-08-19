@@ -81,11 +81,23 @@ window.SITE_DATA = {
   // PHOTOS — drop image files into assets/img/gallery/ then list the
   // filenames here in the order you want them to appear.
   // ---------------------------------------------------------------
-  gallery: [
-    // "engagement-01.jpg",
-    // "engagement-02.jpg",
-    // "trip-paris.jpg"
-  ],
+   gallery: [
+  "airshow.jpeg",
+  "asheville 1.jpeg",
+  "boston.jpeg",
+  "drone flying.jpg",
+  "florida panhandle.jpeg",
+  "horse riding.jpeg",
+  "jack daniels .jpeg",
+  "mini golf.jpeg",
+  "more panhandle.jpeg",
+  "mt washington.jpeg",
+  "panhandle 2.jpeg",
+  "the basin.jpeg",
+  "vocho.jpeg",
+  "waterfall NC.jpeg",
+  "yellow porche 1.png"
+  ], 
   // ---------------------------------------------------------------
   // LIVESTREAM
   // ---------------------------------------------------------------
