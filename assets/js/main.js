@@ -6,6 +6,19 @@
 document.addEventListener("DOMContentLoaded", function () {
   var DATA = window.SITE_DATA || {};
 
+  /* ---------- Trimmed couple names (avoids stray spaces from site-data.js) ---------- */
+  var coupleP1 = (DATA.couple && DATA.couple.partnerOne) ? DATA.couple.partnerOne.trim() : "";
+  var coupleP2 = (DATA.couple && DATA.couple.partnerTwo) ? DATA.couple.partnerTwo.trim() : "";
+
+  /* ---------- Browser tab title (dynamic, from site-data.js) ---------- */
+  if (coupleP1 || coupleP2) {
+    var names = coupleP1 && coupleP2 ? coupleP1 + " & " + coupleP2 : (coupleP1 || coupleP2);
+    var baseTitle = document.title;
+    document.title = (baseTitle === "Home")
+      ? names + " — Wedding"
+      : baseTitle + " · " + names;
+  }
+
   /* ---------- Mobile nav ---------- */
   var toggle = document.querySelector(".nav-toggle");
   var links = document.querySelector(".nav-links");
@@ -26,13 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ---------- Footer brand (full names) ---------- */
   document.querySelectorAll("[data-couple-brand]").forEach(function (el) {
-    el.textContent = (DATA.couple ? DATA.couple.partnerOne + " & " + DATA.couple.partnerTwo : "");
+    el.textContent = (coupleP1 && coupleP2) ? coupleP1 + " & " + coupleP2 : "";
   });
 
   /* ---------- Nav header brand (initials, so it never overflows) ---------- */
   document.querySelectorAll("[data-couple-initials]").forEach(function (el) {
-    if (DATA.couple && DATA.couple.partnerOne && DATA.couple.partnerTwo) {
-      el.textContent = DATA.couple.partnerOne.charAt(0) + " & " + DATA.couple.partnerTwo.charAt(0);
+    if (coupleP1 && coupleP2) {
+      el.textContent = coupleP1.charAt(0) + " & " + coupleP2.charAt(0);
     }
   });
   document.querySelectorAll("[data-wedding-date-footer]").forEach(function (el) {
@@ -60,11 +73,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* ---------- HERO (index.html) ---------- */
   var heroNames = document.querySelector("[data-hero-names]");
-  if (heroNames && DATA.couple) {
+  if (heroNames && (coupleP1 || coupleP2)) {
     heroNames.innerHTML =
-      DATA.couple.partnerOne +
+      coupleP1 +
       '<span class="hero-ampersand">&amp;</span>' +
-      DATA.couple.partnerTwo;
+      coupleP2;
   }
   var heroDate = document.querySelector("[data-hero-date]");
   if (heroDate && DATA.wedding) {
@@ -102,6 +115,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   fillEvent("ceremony", DATA.ceremony);
   fillEvent("reception", DATA.reception);
+
+  /* ---------- Attire note (details.html), editable in site-data.js ---------- */
+  document.querySelectorAll("[data-attire-note]").forEach(function (el) {
+    el.textContent = DATA.attireNote || "";
+  });
 
   /* ---------- OUR STORY page ---------- */
   var timelineEl = document.querySelector("[data-timeline]");
