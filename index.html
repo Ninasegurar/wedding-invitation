@@ -1,77 +1,142 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home</title>
-<link rel="stylesheet" href="assets/css/style.css?v=2">
-</head>
-<body>
-
-<header class="site-header">
-  <div class="nav-wrap">
-    <a href="index.html" class="brand" data-couple-initials>S &amp; D</a>
-    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="details.html">Details</a></li>
-      <li><a href="our-story.html">Our Story</a></li>
-      <li><a href="photos.html">Photos</a></li>
-      <li><a href="guestbook.html">Guestbook</a></li>
-      <li><a href="livestream.html">Livestream</a></li>
-    </ul>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="hero-eyebrow">Together with our families</div>
-  <h1 class="hero-names" data-hero-names>Partner One <span class="hero-ampersand">&amp;</span> Partner Two</h1>
-  <div class="divider"><span class="mark">&#10022;</span></div>
-  <div class="hero-date" data-hero-date>August 22, 2026</div>
-  <div class="hero-date" data-hashtag style="font-size:16px; letter-spacing:2px; opacity:0.7; margin-top:6px;"></div>
-  <div class="hero-cta">
-    <a href="details.html" class="btn btn-solid">Wedding Details</a>
-    <a href="guestbook.html" class="btn">Sign the Guestbook</a>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-subtitle">We can't wait to celebrate</div>
-    <h2 class="section-title" style="text-align:center;">You're Invited</h2>
-    <p class="section-lead">
-      We're so grateful to be surrounded by the people who mean the most to us.
-      Explore the details below, read our story, and if you can't be with us in
-      person, join our livestream on the day.
-    </p>
-    <div class="event-grid" style="margin-top:44px;">
-      <div class="event-card fade-in">
-        <div class="event-kicker">Ceremony</div>
-        <h3 class="event-title" data-ceremony-venue>Venue Name</h3>
-        <p class="event-detail" data-ceremony-date>Date</p>
-        <p class="event-detail small" data-ceremony-time>Time</p>
-      </div>
-      <div class="event-card fade-in">
-        <div class="event-kicker">Reception</div>
-        <h3 class="event-title" data-reception-venue>Venue Name</h3>
-        <p class="event-detail" data-reception-date>Date</p>
-        <p class="event-detail small" data-reception-time>Time</p>
-      </div>
-    </div>
-    <div style="text-align:center; margin-top:36px;">
-      <a href="details.html" class="btn">View Full Details &amp; Directions</a>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="brand" data-couple-brand>Partner One &amp; Partner Two</div>
-    <div><span data-wedding-date-footer>August 22, 2026</span></div>
-  </div>
-</footer>
-
-<script src="assets/js/site-data.js?v=3"></script>
-<script src="assets/js/main.js?v=4"></script>
-</body>
-</html>
+/* ================================================================
+   SITE-DATA.JS  —  THE ONLY FILE YOU NEED TO EDIT FOR CONTENT
+   ================================================================
+   This file holds every piece of editable information on the site:
+   your names, the date, ceremony & reception details, your story,
+   the livestream link, and the guestbook connections.
+   Because visitors only ever load the *finished* HTML pages, there is
+   no way for anyone but you (the person editing this file and
+   re-publishing the site) to change anything here. Guests can only
+   view pages and submit guestbook notes — they cannot edit this file.
+   HOW TO EDIT:
+   1. Open this file in any text editor.
+   2. Change the values between the quotes " " — don't change the
+      names on the left side of each colon.
+   3. Save the file and re-upload/redeploy your site (see SETUP.md).
+   Dates should be written as ISO strings: "YYYY-MM-DDTHH:MM:SS"
+   in 24-hour time, e.g. 2:30 PM = "14:30:00".
+   ================================================================ */
+window.SITE_DATA = {
+  // ---------------------------------------------------------------
+  // THE COUPLE
+  // ---------------------------------------------------------------
+  couple: {
+    partnerOne: "Siddharth",
+    partnerTwo: "Danielle",
+    hashtag: "" // optional, e.g. "#PartnerOneAndPartnerTwo2026" — leave blank to hide
+  },
+  // ---------------------------------------------------------------
+  // WEDDING DATE (used for hero text + livestream countdown)
+  // ---------------------------------------------------------------
+  wedding: {
+    dateDisplay: "August 22, 2026",     // shown as text throughout the site
+    isoDateTime: "2026-08-22T11:00:00-04:00"  // used to power the countdown — set to ceremony start
+  },
+  // ---------------------------------------------------------------
+  // CEREMONY
+  // ---------------------------------------------------------------
+  ceremony: {
+    venueName: "Randolph Church",
+    addressLine: "US Route 2, Randolph, NH 03593",
+    mapsUrl: "https://maps.app.goo.gl/cWdnxgfHiUXs8eFk8",
+    startTime: "10:30 AM",
+    endTime: "11:30 AM"
+  },
+  // ---------------------------------------------------------------
+  // RECEPTION
+  // ---------------------------------------------------------------
+  reception: {
+    venueName: "Omni Mount Washington",
+    addressLine: "310 Mount Washington Hotel Rd, Bretton Woods, NH 03575",
+    mapsUrl: "https://maps.app.goo.gl/5rLwdRG1cBTegnbv5",
+    startTime: "1:00 PM",
+    endTime: "4:00 PM"
+  },
+  // ---------------------------------------------------------------
+  // ATTIRE — shown as a note on the Details page. Edit freely; this
+  // will no longer get overwritten by future site updates.
+  // ---------------------------------------------------------------
+  attireNote: "Attire: formal / black tie optional",
+  // ---------------------------------------------------------------
+  // OUR STORY — add, remove, or edit as many chapters as you like
+  // ---------------------------------------------------------------
+  story: [
+    {
+      date: "Spring 2019",
+      heading: "How We Met",
+      text: "When we met, from the very beginning, something about us just felt right. We started dating in the summer of 2024, taking things slowly and letting our relationship unfold naturally. But it didn’t take long to realize that what we had was something special."
+    },
+    {
+      date: "Winter 2021",
+      heading: "Moving In Together",
+      text: "After spending our first Christmas together, being together simply became part of everyday life. Most days were spent side by side, and somewhere along the way, two separate lives began to feel like one. By May 2025, we officially made a home together — although in many ways, it already felt like we had."
+    },
+    {
+      date: "Autumn 2025",
+      heading: "The Proposal",
+      text: "Our story has never been about one grand moment. It has been about how easy and natural it has felt from the beginning, the life we’ve built together, and the quiet certainty that we had found something meant to last. Marriage had come up more than once, so when Sid officially asked the question, it felt less like a surprise and more like the natural next step in a life we already knew we wanted to share. Fittingly, it happened in one of our favorite ways to have the conversations that matter most — early in the morning, before the day had really begun. And the answer felt just as natural: it would be an honor to spend the rest of our lives together."
+    },
+    {
+      date: "August 22, 2026",
+      heading: "Our Wedding Day",
+      text: "Now, we couldn’t be happier to begin the next chapter together—and to celebrate it with the people we love most."
+    }
+  ],
+  // ---------------------------------------------------------------
+  // PHOTOS — drop image files into assets/img/gallery/ then list the
+  // filenames here in the order you want them to appear.
+  // ---------------------------------------------------------------
+  gallery: [
+    "airshow.jpeg",
+    "asheville 1.jpeg",
+    "boston.jpeg",
+    "drone flying.jpg",
+    "florida panhandle.jpeg",
+    "horse riding.jpeg",
+    "jack daniels .jpeg",
+    "mini golf.jpeg",
+    "more panhandle.jpeg",
+    "mt washington.jpeg",
+    "panhandle 2.jpeg",
+    "the basin.jpeg",
+    "vocho.jpeg",
+    "waterfall NC.jpeg",
+    "yellow porche 1.png"
+  ],
+  // ---------------------------------------------------------------
+  // LIVESTREAM
+  // ---------------------------------------------------------------
+  livestream: {
+    // Paste the EMBED URL from YouTube/Vimeo here once you have it.
+    // YouTube: use the "Embed" link, formatted like:
+    //   https://www.youtube.com/embed/VIDEO_ID
+    // Vimeo:
+    //   https://player.vimeo.com/video/VIDEO_ID
+    // Leave blank until you're ready to go live — a placeholder will show instead.
+    embedUrl: "",
+    // A normal shareable link, shown as a backup "Watch on YouTube" button
+    watchPageUrl: "",
+    // Shown under the countdown so guests know their local time may differ
+    timezoneNote: "All times shown in US Eastern Time (ET)"
+  },
+  // ---------------------------------------------------------------
+  // GUESTBOOK — see SETUP.md for how to get these values
+  // ---------------------------------------------------------------
+  guestbook: {
+    // 1) Formspree sends you both an email every time someone signs the guestbook.
+    //    Create a free form at https://formspree.io and paste its endpoint below.
+    formspreeEndpoint: "https://formspree.io/f/mgogjzdv",
+    // 2) Supabase stores the messages so they can be displayed publicly on this page.
+    //    Create a free project at https://supabase.com and paste the values below.
+    //    Full step-by-step instructions are in SETUP.md.
+    supabaseUrl: "https://sylxxhfhmjtvaekfrkcd.supabase.co",
+    supabaseAnonKey: "sb_publishable_ZQON32nifIT0kcBuNtHAeA__L3RRVw2",
+    supabaseTable: "guestbook"
+  },
+  // Emails that should receive guestbook notifications (informational —
+  // the actual recipients are configured in your Formspree form settings)
+  notifyEmails: [
+    "ninasegurar@icloud.com",
+    "siddharth.si@gmail.com"
+  ]
+};
