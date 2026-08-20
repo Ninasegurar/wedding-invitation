@@ -64,7 +64,7 @@ window.SITE_DATA = {
     {
       date: "Spring 2024",
       heading: "How We Met",
-      text: "When we met, from the very beginning, something about us just felt right. We started dating in the summer of 2024, taking things slowly and letting our relationship unfold naturally. But it didn’t take long to realize that what we had was something special."
+      text: "We met each other in early spring of 2024 and started dating in the summer of 2024. From the very beginning, something about us just felt right. Taking things slowly we let our relationship unfold naturally. But it didn’t take long to realize that what we had was something special."
     },
     {
       date: "Summer 2025",
