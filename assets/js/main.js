@@ -160,14 +160,35 @@ document.addEventListener("DOMContentLoaded", function () {
         "Photos will appear here once added to assets/img/gallery/ and listed in site-data.js." +
         "</div>";
     } else {
-      galleryEl.innerHTML = files.map(function (file) {
+      galleryEl.innerHTML = "";
+      files.forEach(function (file) {
         var src = "assets/img/gallery/" + file;
-        return (
-          '<div class="gallery-item fade-in" data-full="' + src + '">' +
-            '<img src="' + src + '" alt="Wedding photo" loading="lazy">' +
-          "</div>"
-        );
-      }).join("");
+        var item = document.createElement("div");
+        item.className = "gallery-item fade-in";
+        item.setAttribute("data-full", src);
+
+        var img = document.createElement("img");
+        img.alt = "Wedding photo";
+        img.loading = "lazy";
+        // Size each tile based on the photo's own proportions once it
+        // loads, so tall/wide photos naturally get taller/wider tiles
+        // instead of a fixed repeating pattern.
+        img.addEventListener("load", function () {
+          var ratio = img.naturalWidth / img.naturalHeight;
+          if (ratio >= 1.35) {
+            item.style.gridColumn = "span 2";
+            item.style.gridRow = "span 2";
+          } else if (ratio <= 0.75) {
+            item.style.gridRow = "span 3";
+          } else {
+            item.style.gridRow = "span 2";
+          }
+        });
+        img.src = src;
+
+        item.appendChild(img);
+        galleryEl.appendChild(item);
+      });
 
       // Re-run fade-in observer on newly injected gallery items
       // (the earlier observer only saw elements present at page load)
