@@ -56,7 +56,7 @@ window.SITE_DATA = {
   // ATTIRE — shown as a note on the Details page. Edit freely; this
   // will no longer get overwritten by future site updates.
   // ---------------------------------------------------------------
-  attireNote: "Semi-formal - but wear what you are comfortable in! Maybe save the hiking boots for Sunday though :)",
+  attireNote: "Attire: formal / black tie optional",
   // ---------------------------------------------------------------
   // OUR STORY — add, remove, or edit as many chapters as you like
   // ---------------------------------------------------------------
@@ -88,11 +88,11 @@ window.SITE_DATA = {
   // ---------------------------------------------------------------
   gallery: [
     "key west.jpeg",
-    "rock garden 1.heic",
-    "mammoth cave.heic",
-    "icy cold.heic",
+    "rock garden 1.jpg",
+    "mammoth cave.jpg",
+    "icy cold.jpg",
     "airshow.jpeg",
-    "yellow porche 2.png"
+    "yellow porche 2.PNG",
     "asheville 1.jpeg",
     "boston.jpeg",
     "drone flying.jpg",
@@ -105,7 +105,7 @@ window.SITE_DATA = {
     "panhandle 2.jpeg",
     "the basin.jpeg",
     "vocho.jpeg",
-    "waterfall NC.jpeg",
+    "waterfall NC.jpeg"
   ],
   // ---------------------------------------------------------------
   // LIVESTREAM
