@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!videoFrame) return;
     if (live.embedUrl) {
       videoFrame.innerHTML =
-        '<iframe src="' + live.embedUrl + '" title="Wedding livestream" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>' +
+        '<iframe src="' + live.embedUrl + '" title="Wedding livestream" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen scrolling="no" style="overflow:hidden;"></iframe>' +
         '<button type="button" class="fullscreen-btn" aria-label="View fullscreen">' + expandIcon + '</button>';
 
       var fsBtn = videoFrame.querySelector(".fullscreen-btn");
