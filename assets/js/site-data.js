@@ -88,9 +88,9 @@ window.SITE_DATA = {
   // ---------------------------------------------------------------
   gallery: [
     "key west.jpeg",
-    "rock garden 1.HEIC",
-    "mammoth cave.HEIC",
-    "icy cold.HEIC",
+    "rock garden 1.heic",
+    "mammoth cave.heic",
+    "icy cold.heic",
     "airshow.jpeg",
     "yellow porche 2.png"
     "asheville 1.jpeg",
