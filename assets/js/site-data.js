@@ -56,7 +56,7 @@ window.SITE_DATA = {
   // ATTIRE — shown as a note on the Details page. Edit freely; this
   // will no longer get overwritten by future site updates.
   // ---------------------------------------------------------------
-  attireNote: "Attire: formal / black tie optional",
+  attireNote: "Attire: semi-formal, but wear what is comfortable! I would suggest saving your hiking boots for Sunday tho! :)",
   // ---------------------------------------------------------------
   // OUR STORY — add, remove, or edit as many chapters as you like
   // ---------------------------------------------------------------
@@ -114,7 +114,7 @@ window.SITE_DATA = {
     // Vimeo:
     //   https://player.vimeo.com/video/VIDEO_ID
     // Leave blank until you're ready to go live — a placeholder will show instead.
-    embedUrl: "https://evt.live/siddharth_si1295/siddharth-and-danielle-wedding-live-stream/embed?autoplay=true",
+    embedUrl: "ttps://evt.live/siddharth_si1295/siddharth-and-danielle-wedding-live-stream/embed?autoplay=true",
     // A normal shareable link, shown as a backup "Watch on YouTube" button
     watchPageUrl: "",
     // Shown under the countdown so guests know their local time may differ
