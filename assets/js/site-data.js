@@ -97,12 +97,9 @@ window.SITE_DATA = {
     "boston.jpeg",
     "drone flying.jpg",
     "florida panhandle.jpeg",
-    "horse riding.jpeg",
     "jack daniels .jpeg",
-    "mini golf.jpeg",
     "more panhandle.jpeg",
     "mt washington.jpeg",
-    "panhandle 2.jpeg",
     "the basin.jpeg",
     "vocho.jpeg",
     "waterfall NC.jpeg"
