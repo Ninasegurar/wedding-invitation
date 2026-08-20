@@ -156,39 +156,21 @@ document.addEventListener("DOMContentLoaded", function () {
     var files = Array.isArray(DATA.gallery) ? DATA.gallery : [];
     if (files.length === 0) {
       galleryEl.innerHTML =
-        '<div class="gallery-placeholder" style="grid-column: 1 / -1; padding: 60px 20px; border: 1px dashed var(--gold-dim); border-radius:6px;">' +
+        '<div class="gallery-placeholder" style="padding: 60px 20px; border: 1px dashed var(--line); border-radius:6px;">' +
         "Photos will appear here once added to assets/img/gallery/ and listed in site-data.js." +
         "</div>";
     } else {
-      galleryEl.innerHTML = "";
-      files.forEach(function (file) {
+      // Each photo keeps its own natural aspect ratio via CSS masonry
+      // columns (see .gallery-grid / .gallery-item in style.css) — no
+      // JS sizing needed, so photos can never overlap.
+      galleryEl.innerHTML = files.map(function (file) {
         var src = "assets/img/gallery/" + file;
-        var item = document.createElement("div");
-        item.className = "gallery-item fade-in";
-        item.setAttribute("data-full", src);
-
-        var img = document.createElement("img");
-        img.alt = "Wedding photo";
-        img.loading = "lazy";
-        // Size each tile based on the photo's own proportions once it
-        // loads, so tall/wide photos naturally get taller/wider tiles
-        // instead of a fixed repeating pattern.
-        img.addEventListener("load", function () {
-          var ratio = img.naturalWidth / img.naturalHeight;
-          if (ratio >= 1.35) {
-            item.style.gridColumn = "span 2";
-            item.style.gridRow = "span 2";
-          } else if (ratio <= 0.75) {
-            item.style.gridRow = "span 3";
-          } else {
-            item.style.gridRow = "span 2";
-          }
-        });
-        img.src = src;
-
-        item.appendChild(img);
-        galleryEl.appendChild(item);
-      });
+        return (
+          '<div class="gallery-item fade-in" data-full="' + src + '">' +
+            '<img src="' + src + '" alt="Wedding photo" loading="lazy">' +
+          "</div>"
+        );
+      }).join("");
 
       // Re-run fade-in observer on newly injected gallery items
       // (the earlier observer only saw elements present at page load)
