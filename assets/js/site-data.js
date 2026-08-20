@@ -87,7 +87,12 @@ window.SITE_DATA = {
   // filenames here in the order you want them to appear.
   // ---------------------------------------------------------------
   gallery: [
+    "key west.jpeg"
+    "rock garden 1.HEIC"
+    "mammoth cave.HEIC"
+    "icy cold.HEIC"
     "airshow.jpeg",
+    "yellow porche 2.png"
     "asheville 1.jpeg",
     "boston.jpeg",
     "drone flying.jpg",
@@ -101,7 +106,6 @@ window.SITE_DATA = {
     "the basin.jpeg",
     "vocho.jpeg",
     "waterfall NC.jpeg",
-    "yellow porche 1.png"
   ],
   // ---------------------------------------------------------------
   // LIVESTREAM
