@@ -53,7 +53,7 @@ window.SITE_DATA = {
     endTime: "4:00 PM",
     // Optional small note shown under the reception card wherever it
     // appears (home page + details page). Leave blank ("") to hide it.
-    note: "By invitation only"
+    note: "* By invitation only"
   },
   // ---------------------------------------------------------------
   // ATTIRE — shown as a note on the Details page. Edit freely; this
