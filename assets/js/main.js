@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (heroNames && (coupleP1 || coupleP2)) {
     heroNames.innerHTML =
       coupleP1 +
-      '<span class="hero-ampersand">&amp;</span>' +
+      ' <span class="hero-ampersand">&amp;</span> ' +
       coupleP2;
   }
   var heroDate = document.querySelector("[data-hero-date]");
