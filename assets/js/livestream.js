@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // party players handle their own resize/fullscreen behavior better
       // than we can from outside a cross-origin iframe.
       videoFrame.innerHTML =
-        '<iframe src="' + live.embedUrl + '" title="Wedding livestream" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>';
+        '<iframe src="' + live.embedUrl + '" title="Wedding livestream" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen scrolling="no" style="overflow:hidden;"></iframe>';
     } else {
       videoFrame.innerHTML =
         '<div class="video-placeholder">The livestream will appear here once we go live.<br>Check back at the ceremony start time!</div>';
