@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Livestream</title>
-<link rel="stylesheet" href="assets/css/style.css?v=11">
+<link rel="stylesheet" href="assets/css/style.css?v=12">
 </head>
 <body>
 
@@ -37,10 +37,37 @@
     <p data-livestream-message style="font-family: var(--font-serif); font-size:22px; color: var(--ink); margin-top:10px;"></p>
     <p data-timezone-note style="color: var(--ink-faint); font-size:15px;"></p>
 
-    <div class="video-frame" data-video-frame></div>
+    <div class="livestream-layout">
+      <div class="livestream-video-col">
+        <div class="video-frame" data-video-frame></div>
+        <div style="margin-top:26px;">
+          <a href="#" data-watch-link class="btn" target="_blank" rel="noopener">Watch on YouTube &#8594;</a>
+        </div>
+      </div>
 
-    <div style="margin-top:26px;">
-      <a href="#" data-watch-link class="btn" target="_blank" rel="noopener">Watch on YouTube &#8594;</a>
+      <div class="livestream-chat-col">
+        <h2 class="section-title" style="font-size:26px; text-align:left;">Guestbook</h2>
+        <p class="section-lead" style="text-align:left; font-size:15px; margin:8px 0 0;">
+          Sign below and your note will appear here for everyone to see.
+        </p>
+
+        <form id="guest-form" class="guest-form" style="text-align:left;">
+          <div class="field">
+            <label for="guest-name">Your Name</label>
+            <input type="text" id="guest-name" name="name" required maxlength="80">
+          </div>
+          <div class="field">
+            <label for="guest-message">Your Message</label>
+            <textarea id="guest-message" name="message" rows="4" required maxlength="600"></textarea>
+          </div>
+          <button type="submit" class="btn btn-solid">Sign the Guestbook</button>
+          <div id="form-status" class="form-status"></div>
+        </form>
+
+        <div id="guest-wall" class="guest-wall livestream-guest-wall">
+          <!-- Populated automatically -->
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -52,8 +79,10 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="assets/js/site-data.js?v=6"></script>
 <script src="assets/js/main.js?v=8"></script>
-<script src="assets/js/livestream.js?v=8"></script>
+<script src="assets/js/livestream.js?v=10"></script>
+<script src="assets/js/guestbook.js?v=2"></script>
 </body>
 </html>
