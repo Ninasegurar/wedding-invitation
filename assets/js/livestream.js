@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         '<button type="button" class="fullscreen-btn" aria-label="View fullscreen">' + expandIcon + '</button>';
 
       var fsBtn = videoFrame.querySelector(".fullscreen-btn");
+      var iframeEl = videoFrame.querySelector("iframe");
       if (fsBtn) {
         fsBtn.addEventListener("click", toggleFullscreen);
       }
@@ -63,6 +64,20 @@ document.addEventListener("DOMContentLoaded", function () {
           if (!fsBtn) return;
           fsBtn.innerHTML = isFullscreen() ? shrinkIcon : expandIcon;
           fsBtn.setAttribute("aria-label", isFullscreen() ? "Exit fullscreen" : "View fullscreen");
+
+          // Some third-party embeds (like this one) cache their internal
+          // layout at the fullscreen size and don't notice when the
+          // container shrinks back down on exit, leaving a zoomed/cropped
+          // view. Since it's a cross-origin page we can't fix its resize
+          // logic directly, so force it to reload cleanly at the correct
+          // (smaller) size instead.
+          if (!isFullscreen() && iframeEl) {
+            var src = iframeEl.src;
+            setTimeout(function () {
+              iframeEl.src = "";
+              iframeEl.src = src;
+            }, 50);
+          }
         });
       });
     } else {
