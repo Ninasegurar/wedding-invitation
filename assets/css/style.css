@@ -587,6 +587,49 @@ a:hover { color: var(--ink-soft); }
   aspect-ratio: 16 / 9;
   position: relative;
 }
+
+/* ---------- Livestream page: video + guestbook side-by-side ---------- */
+.livestream-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-top: 36px;
+  text-align: left;
+}
+.livestream-video-col {
+  flex: 1 1 600px;
+  min-width: 0;
+}
+.livestream-video-col .video-frame {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+}
+.livestream-chat-col {
+  flex: 0 1 340px;
+  min-width: 280px;
+}
+.livestream-chat-col .guest-form { margin-top: 16px; }
+.livestream-guest-wall {
+  max-height: 420px;
+  overflow-y: auto;
+  margin-top: 20px;
+  padding-right: 4px;
+}
+@media (max-width: 900px) {
+  .livestream-layout {
+    flex-direction: column;
+  }
+  .livestream-video-col,
+  .livestream-chat-col {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+  .livestream-guest-wall {
+    max-height: none;
+    overflow-y: visible;
+  }
+}
 .video-frame iframe {
   width: 100%;
   height: 100%;
