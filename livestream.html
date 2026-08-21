@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Livestream</title>
-<link rel="stylesheet" href="assets/css/style.css?v=13">
+<link rel="stylesheet" href="assets/css/style.css?v=14">
 </head>
 <body>
 
@@ -23,7 +23,7 @@
 </header>
 
 <section class="section" style="padding-top:70px;">
-  <div class="container" style="text-align:center;">
+  <div class="container livestream-container" style="text-align:center;">
     <div class="section-subtitle">Join Us From Anywhere</div>
     <h1 class="section-title">Livestream</h1>
     <p class="section-lead">
@@ -43,27 +43,29 @@
         <div style="margin-top:26px;">
           <a href="#" data-watch-link class="btn" target="_blank" rel="noopener">Watch on YouTube &#8594;</a>
         </div>
+
+        <div class="livestream-form-block">
+          <h2 class="section-title" style="font-size:26px; text-align:left;">Guestbook</h2>
+          <p class="section-lead" style="text-align:left; font-size:15px; margin:8px 0 0;">
+            Sign below and your note will appear here for everyone to see.
+          </p>
+
+          <form id="guest-form" class="guest-form" style="text-align:left;">
+            <div class="field">
+              <label for="guest-name">Your Name</label>
+              <input type="text" id="guest-name" name="name" required maxlength="80">
+            </div>
+            <div class="field">
+              <label for="guest-message">Your Message</label>
+              <textarea id="guest-message" name="message" rows="4" required maxlength="600"></textarea>
+            </div>
+            <button type="submit" class="btn btn-solid">Sign the Guestbook</button>
+            <div id="form-status" class="form-status"></div>
+          </form>
+        </div>
       </div>
 
       <div class="livestream-chat-col">
-        <h2 class="section-title" style="font-size:26px; text-align:left;">Guestbook</h2>
-        <p class="section-lead" style="text-align:left; font-size:15px; margin:8px 0 0;">
-          Sign below and your note will appear here for everyone to see.
-        </p>
-
-        <form id="guest-form" class="guest-form" style="text-align:left;">
-          <div class="field">
-            <label for="guest-name">Your Name</label>
-            <input type="text" id="guest-name" name="name" required maxlength="80">
-          </div>
-          <div class="field">
-            <label for="guest-message">Your Message</label>
-            <textarea id="guest-message" name="message" rows="4" required maxlength="600"></textarea>
-          </div>
-          <button type="submit" class="btn btn-solid">Sign the Guestbook</button>
-          <div id="form-status" class="form-status"></div>
-        </form>
-
         <div id="guest-wall" class="guest-wall livestream-guest-wall">
           <!-- Populated automatically -->
         </div>
