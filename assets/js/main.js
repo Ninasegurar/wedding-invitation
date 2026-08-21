@@ -112,6 +112,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("[data-" + prefix + "-date]").forEach(function (el) {
       el.textContent = DATA.wedding ? DATA.wedding.dateDisplay : "";
     });
+    document.querySelectorAll("[data-" + prefix + "-note]").forEach(function (el) {
+      if (obj.note) {
+        el.textContent = obj.note;
+        el.style.display = "";
+      } else {
+        el.style.display = "none";
+      }
+    });
   }
   fillEvent("ceremony", DATA.ceremony);
   fillEvent("reception", DATA.reception);
