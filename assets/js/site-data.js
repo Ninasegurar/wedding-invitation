@@ -50,7 +50,10 @@ window.SITE_DATA = {
     addressLine: "310 Mount Washington Hotel Rd, Bretton Woods, NH 03575",
     mapsUrl: "https://maps.app.goo.gl/5rLwdRG1cBTegnbv5",
     startTime: "1:00 PM",
-    endTime: "4:00 PM"
+    endTime: "4:00 PM",
+    // Optional small note shown under the reception card wherever it
+    // appears (home page + details page). Leave blank ("") to hide it.
+    note: "By invitation only"
   },
   // ---------------------------------------------------------------
   // ATTIRE — shown as a note on the Details page. Edit freely; this
