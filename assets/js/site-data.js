@@ -117,7 +117,7 @@ window.SITE_DATA = {
     // Vimeo:
     //   https://player.vimeo.com/video/VIDEO_ID
     // Leave blank until you're ready to go live — a placeholder will show instead.
-    embedUrl: "https://evt.live/siddharth_si1295/test-event/embedBare?autoplay=true",
+    embedUrl: "https://evt.live/siddharth_si1295/siddharth-danielle-wedding/embedBare?autoplay=true",
     // A normal shareable link, shown as a backup "Watch on YouTube" button
     watchPageUrl: "",
     // Shown under the countdown so guests know their local time may differ
