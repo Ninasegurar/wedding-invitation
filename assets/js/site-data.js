@@ -108,20 +108,27 @@ window.SITE_DATA = {
     "waterfall NC.jpeg"
   ],
   // ---------------------------------------------------------------
-  // LIVESTREAM
+  // WEDDING PHOTOS — photos from the day itself (ceremony, reception,
+  // photographer shots, etc.), shown on their own "Wedding Photos" page.
+  // Drop image files into assets/img/wedding-photos/ then list the
+  // filenames here in the order you want them to appear.
+  // ---------------------------------------------------------------
+  weddingPhotos: [
+  ],
+  // ---------------------------------------------------------------
+  // LIVESTREAM REPLAY — the wedding has happened, so this page now
+  // shows a replay of the ceremony instead of a live countdown.
   // ---------------------------------------------------------------
   livestream: {
-    // Paste the EMBED URL from YouTube/Vimeo here once you have it.
+    // Paste the EMBED URL for the replay (YouTube/Vimeo/EventLive) here.
     // YouTube: use the "Embed" link, formatted like:
     //   https://www.youtube.com/embed/VIDEO_ID
     // Vimeo:
     //   https://player.vimeo.com/video/VIDEO_ID
-    // Leave blank until you're ready to go live — a placeholder will show instead.
+    // Leave blank until the replay is ready — a placeholder will show instead.
     embedUrl: "https://evt.live/siddharth_si1295/siddharth-and-danielle-wedding-live-stream/embedBare?autoplay=true",
     // A normal shareable link, shown as a backup "Watch on YouTube" button
-    watchPageUrl: "",
-    // Shown under the countdown so guests know their local time may differ
-    timezoneNote: "All times shown in US Eastern Time (ET)"
+    watchPageUrl: ""
   },
   // ---------------------------------------------------------------
   // GUESTBOOK — see SETUP.md for how to get these values
