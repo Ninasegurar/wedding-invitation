@@ -122,6 +122,7 @@ window.SITE_DATA = {
   "92BCD5E6-D1AF-4A3B-A656-3D694299839C_1_105_c.jpeg",
   "E2B0CB00-FCD2-431F-9200-E12E3715B8E8.jpeg",
   "F9B3C62D-54C7-4B16-8392-E05B9499EC78_1_105_c.jpeg"
+  "21f5e596-5598-4a46-809b-fa369c1f43c4.jpg"
 ],
   // ---------------------------------------------------------------
   // LIVESTREAM REPLAY — the wedding has happened, so this page now
