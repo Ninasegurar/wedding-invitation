@@ -114,7 +114,15 @@ window.SITE_DATA = {
   // filenames here in the order you want them to appear.
   // ---------------------------------------------------------------
   weddingPhotos: [
-  ],
+  "7FC3EB7F-CEF3-4205-BA6C-03DF75164AC8_1_102_o.jpeg",
+  "D3C62B44-D9C0-4CEC-ADAE-E98B80BA2092_1_102_o.jpeg",
+  "D671EE19-791D-4403-BBB8-64FAC210716A_1_102_o.jpeg",
+  "C643C07F-F7C9-4829-974F-2FCAA6135A73_1_102_o.jpeg",
+  "E483B349-2D42-4733-A91E-B5B371D5E50A_1_102_o.jpeg",
+  "92BCD5E6-D1AF-4A3B-A656-3D694299839C_1_105_c.jpeg",
+  "E2B0CB00-FCD2-431F-9200-E12E3715B8E8.jpeg",
+  "F9B3C62D-54C7-4B16-8392-E05B9499EC78_1_105_c.jpeg"
+],
   // ---------------------------------------------------------------
   // LIVESTREAM REPLAY — the wedding has happened, so this page now
   // shows a replay of the ceremony instead of a live countdown.
